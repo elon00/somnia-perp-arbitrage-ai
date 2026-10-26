@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "somnia-perp-arbitrage-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Somnia Network",
+        "PROJECT_TICKER": "SOMARB"
+      },
+      "tools": [
+        {
+          "name": "verify_somarb_invariants",
+          "description": "Verifies deterministic invariants for Somnia Perp Arbitrage AI on Somnia Network."
+        },
+        {
+          "name": "execute_somarb_action",
+          "description": "Executes authenticated Trading Bot state transition."
+        }
+      ]
+    }
+  }
+}
